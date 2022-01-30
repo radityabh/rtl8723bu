@@ -4079,7 +4079,8 @@ static int	cfg80211_rtw_change_station(struct wiphy *wiphy, struct net_device *n
 
 struct sta_info *rtw_sta_info_get_by_idx(const int idx, struct sta_priv *pstapriv)
 
-{
+{
+
 	_list	*phead, *plist;
 	struct sta_info *psta = NULL;
 	int i = 0;
@@ -5069,7 +5070,7 @@ exit:
 }
 
 static void cfg80211_rtw_mgmt_frame_register(struct wiphy *wiphy,
-#if (LINUX_VERSION_CODE >= KERNEL_VERSION(3, 6, 0))
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(3, 6, 0)) && !defined(BUILD_OPENWRT)
 	struct wireless_dev *wdev,
 #else
 	struct net_device *ndev,
