@@ -5930,7 +5930,7 @@ static struct cfg80211_ops rtw_cfg80211_ops = {
 
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(5, 8, 0)) && !defined(BUILD_OPENWRT)
 	.update_mgmt_frame_registrations = cfg80211_rtw_mgmt_frame_register,
-#elif (LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,37)) || defined(BUILD_OPENWRT)
+#elif (LINUX_VERSION_CODE >= KERNEL_VERSION(5, 8, 0)) || defined(BUILD_OPENWRT)
 	.mgmt_frame_register = cfg80211_rtw_mgmt_frame_register,
 #endif
 
