@@ -5928,11 +5928,13 @@ static struct cfg80211_ops rtw_cfg80211_ops = {
 	.action = cfg80211_rtw_mgmt_tx,
 #endif
 
+/*
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(5, 8, 0)) && !defined(BUILD_OPENWRT)
 	.update_mgmt_frame_registrations = cfg80211_rtw_mgmt_frame_register,
 #elif (LINUX_VERSION_CODE >= KERNEL_VERSION(5, 8, 0))
 	.mgmt_frame_register = cfg80211_rtw_mgmt_frame_register,
 #endif
+*/
 
 #if defined(CONFIG_TDLS) && (LINUX_VERSION_CODE >= KERNEL_VERSION(3,2,0))
 	.tdls_mgmt = cfg80211_rtw_tdls_mgmt,
